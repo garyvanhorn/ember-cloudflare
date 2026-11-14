@@ -2,7 +2,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   // Kept at the root, beside the workspace, so Deploy to Cloudflare finds it: the button renames the
   // Worker and the bucket here for each deployer.
-  "name": "ember",
+  "name": "gvx-chat",
   "main": "apps/worker/src/index.ts",
   "compatibility_date": "2026-10-01",
   // Link previews fetch pages people name: this sends those fetches out over the public Internet even
@@ -59,7 +59,7 @@
 
   // The files people upload to rooms. Deploying binds the account's bucket of this name, and creates
   // it if there's none and the deploy's token may. `wrangler dev` keeps them on this machine.
-  "r2_buckets": [{ "binding": "FILES", "bucket_name": "ember" }],
+  "r2_buckets": [{ "binding": "FILES", "bucket_name": "gvx-chat" }],
 
   // Cloudflare Images, which makes the preview of a picture whose uploader sent none, as a bot or a
   // browser that couldn't read it doesn't (apps/worker/src/files/previews.ts). There's nothing to make
